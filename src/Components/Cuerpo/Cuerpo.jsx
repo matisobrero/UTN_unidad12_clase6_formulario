@@ -6,10 +6,14 @@ import foto from '../Cuerpo/mati.jpg'
 
 
 const RegistroSchema = Yup.object().shape({
-  nombre: Yup.string().required("*El nombre es requerido"),
-  apellido: Yup.string().required("*El apellido es requerido"),
+  nombre: Yup.string().min(2, "*El nombre es muy corto")
+  .max(50, "*El nombre es muy largo").required("*El nombre es requerido"),
+  apellido: Yup.string().min(2, "*El apellido es muy corto")
+  .max(50, "*El apellido es muy largo").required("*El apellido es requerido"),
   email: Yup.string().email("*Correo electrónico inválido").required("*El correo electrónico es requerido"),
-  telefono: Yup.string().required("*El teléfono es requerido"),
+  telefono: Yup.string()
+  .required("*El teléfono es requerido")
+  .test('min-length', 'El teléfono debe tener al menos 6 números', (value) => value && value.replace(/\D/g, '').length >= 6),
   password: Yup.string().required("*La contraseña es requerida"),
   confirmarPassword: Yup.string()
     .oneOf([Yup.ref("password"), null], "*Las contraseñas deben coincidir")
