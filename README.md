@@ -1,8 +1,12 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Registro de Usuario
 
-Currently, two official plugins are available:
+Este es un formulario de registro de usuario implementado en React utilizando las bibliotecas Formik, Yup y Chakra UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tecnologías
+
+React: Biblioteca para construir interfaces de usuario.
+Formik: Facilita la gestión de formularios en React.
+Yup: Biblioteca para la validación de esquemas en JavaScript.
+Chakra UI: Biblioteca de componentes para React que simplifica la creación de interfaces.
