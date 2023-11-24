@@ -27,7 +27,7 @@ const Cuerpo = () => {
 
   return (
     <Flex align="start" justify="space-evenly" minH="80vh" flexWrap="wrap">
-    <Box> 
+    <Box w={[300, 400, 600, 800]}> 
 
     <Heading mt="8"> Ingreso al Sistema</Heading>
     <Image 
@@ -42,7 +42,7 @@ const Cuerpo = () => {
 
     </Box>
    
-    <Box width="md" mt="8" pb="10px">
+    <Box w={[300, 400, 500]} pb="10px" mt="8">
     <Formik
       initialValues={{
         nombre: "",

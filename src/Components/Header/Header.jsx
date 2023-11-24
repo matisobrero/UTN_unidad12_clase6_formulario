@@ -11,32 +11,30 @@ function Header() {
     color="white"
     alignItems="center"
     justifyContent="space-between"
-    flexWrap="wrap"
+    
   >
     <Link href="/inicio" _hover={{ textDecoration: 'none', color: 'gray.300' }} transition="color 0.3s ease-in-out">
       <Box mr="1em" ml="50px">
-        <Heading size="md">Inicio</Heading>
+        <Heading fontSize={{ base: "15px", md: "18px", lg: "22px" }}>Inicio</Heading>
       </Box>
     </Link>
     <Link href="/actividades" _hover={{ textDecoration: 'none', color: 'gray.300' }} transition="color 0.3s ease-in-out">
       <Box mr="1em">
-        <Heading size="md">Actividades</Heading>
+        <Heading fontSize={{ base: "15px", md: "18px", lg: "22px" }}>Actividades</Heading>
       </Box>
     </Link>
     <Link href="/contacto" _hover={{ textDecoration: 'none', color: 'gray.300' }} transition="color 0.3s ease-in-out">
       <Box mr="1em">
-        <Heading size="md">Contacto</Heading>
+        <Heading fontSize={{ base: "15px", md: "18px", lg: "22px" }}>Contacto</Heading>
       </Box>
     </Link>
     <Spacer />
-    <Flex alignItems="center">
-      {/* Contenedor para centrar el logo */}
+
+    <Flex flexDirection="colum" justifyContent="center">
+      
       <Link href="/" _hover={{ textDecoration: 'none' }} transition="color 0.3s ease-in-out">
         <Box _hover={{ transform: 'scale(1.1)' }}>
-          <Image src={logo} w={90} mr="50px" alt="Logo" />
-          <Text mt="-15px" color="black" fontWeight="bold" textShadow="0 0 2px white">
-            PC Solutions
-          </Text>
+          <Image src={logo} w={{ base: "40px", md: "50px", lg: "80px" }} mr="50px" alt="Logo" />
         </Box>
       </Link>
     </Flex>
